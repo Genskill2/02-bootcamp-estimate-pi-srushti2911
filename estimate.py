@@ -1,6 +1,13 @@
 import math
 import unittest
-
+def wallis(n): 
+	pi = 0.0
+	for i in range(1,n):
+		l = (2.0*i)/(2*i-1)
+		r = (2.0*i)/(2*i+1)
+		p = l*r
+		pi = pi + p
+	return (pi)
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
         for i in range(0, 5):
